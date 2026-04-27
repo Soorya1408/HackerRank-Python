@@ -1,0 +1,14 @@
+# 1. Read English newspaper subscribers
+n = int(input())
+english_set = set(map(int, input().split()))
+
+# 2. Read French newspaper subscribers
+m = int(input())
+french_set = set(map(int, input().split()))
+
+# 3. Find the difference (In English but NOT in French)
+# You can use .difference() or the '-' operator
+only_english = english_set.difference(french_set)
+
+# 4. Print the count
+print(len(only_english))
