@@ -1,0 +1,22 @@
+if __name__ == '__main__':
+    # 1. Read n and m
+    n, m = map(int, input().split())
+
+    # 2. Read the main array
+    arr = list(map(int, input().split()))
+
+    # 3. Read A and B into sets for O(1) lookup speed
+    set_a = set(map(int, input().split()))
+    set_b = set(map(int, input().split()))
+
+    happiness = 0
+
+    # 4. Iterate through the array once
+    for x in arr:
+        if x in set_a:
+            happiness += 1
+        elif x in set_b:
+            happiness -= 1
+
+    # 5. Output total happiness
+    print(happiness)
