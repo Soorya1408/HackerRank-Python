@@ -1,0 +1,14 @@
+# 1. Read English subscribers
+n = int(input())
+english_subs = set(map(int, input().split()))
+
+# 2. Read French subscribers
+m = int(input())
+french_subs = set(map(int, input().split()))
+
+# 3. Perform Union operation
+# You can use .union() or the | operator
+all_subs = english_subs.union(french_subs)
+
+# 4. Print the total count of unique students
+print(len(all_subs))
