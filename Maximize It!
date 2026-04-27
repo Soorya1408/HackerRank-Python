@@ -1,0 +1,24 @@
+from itertools import product
+
+# 1. Read K (number of lists) and M (modulo value)
+k, m = map(int, input().split())
+
+# 2. Read each list, square the elements, and store them
+# We skip the first element of each line as it's just the count
+lists = []
+for _ in range(k):
+    row = list(map(int, input().split()))[1:]
+    lists.append([x**2 for x in row])
+
+# 3. Use product to get every possible combination across all lists
+combinations = product(*lists)
+
+# 4. Calculate (sum % M) for each combination and find the maximum
+max_result = 0
+for combo in combinations:
+    current_sum = sum(combo) % m
+    if current_sum > max_result:
+        max_result = current_sum
+
+# 5. Print the maximum value obtained
+print(max_result)
