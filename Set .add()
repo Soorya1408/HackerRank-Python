@@ -1,0 +1,13 @@
+if __name__ == '__main__':
+    # 1. Read the number of total stamps
+    n = int(input())
+    
+    # 2. Initialize an empty set to store unique country names
+    country_set = set()
+    
+    # 3. Read each country name and add it to the set
+    for _ in range(n):
+        country_set.add(input())
+        
+    # 4. Print the total number of distinct stamps
+    print(len(country_set))
