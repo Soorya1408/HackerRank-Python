@@ -1,0 +1,14 @@
+# 1. Read English newspaper subscribers
+n = int(input())
+english_set = set(map(int, input().split()))
+
+# 2. Read French newspaper subscribers
+m = int(input())
+french_set = set(map(int, input().split()))
+
+# 3. Find the intersection (students in BOTH sets)
+# You can use .intersection() or the & operator
+both_subscriptions = english_set.intersection(french_set)
+
+# 4. Print the total count
+print(len(both_subscriptions))
