@@ -1,0 +1,10 @@
+# Read three integers from input
+a = int(input())
+b = int(input())
+m = int(input())
+
+# 1. Print a to the power of b (a ** b)
+print(pow(a, b))
+
+# 2. Print (a to the power of b) modulo m ( (a ** b) % m )
+print(pow(a, b, m))
