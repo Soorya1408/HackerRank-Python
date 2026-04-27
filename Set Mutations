@@ -1,0 +1,20 @@
+if __name__ == '__main__':
+    # 1. Read the initial set A
+    n = int(input())
+    set_a = set(map(int, input().split()))
+
+    # 2. Read number of operations
+    num_ops = int(input())
+
+    for _ in range(num_ops):
+        # 3. Read command and the size of the next set
+        cmd, length = input().split()
+        # 4. Read the second set for the operation
+        other_set = set(map(int, input().split()))
+        
+        # 5. Dynamically call the method on set_a
+        # This will call update, intersection_update, etc.
+        getattr(set_a, cmd)(other_set)
+
+    # 6. Output the sum of elements in the final set
+    print(sum(set_a))
