@@ -1,0 +1,16 @@
+from itertools import groupby
+
+# 1. Read the input string
+s = input()
+
+# 2. Use groupby to find consecutive groups of the same character
+# 'k' is the character, 'g' is the group (an iterator)
+results = []
+for k, g in groupby(s):
+    # 3. Count the occurrences in the group
+    count = len(list(g))
+    # 4. Format as (count, character)
+    results.append(f"({count}, {k})")
+
+# 5. Join the results with a space and print
+print(" ".join(results))
