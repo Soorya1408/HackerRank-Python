@@ -1,0 +1,13 @@
+from itertools import product
+
+# 1. Read and convert the two lists of integers
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+
+# 2. Compute the Cartesian product
+# This creates an iterator of tuples: (a1, b1), (a1, b2)...
+result = product(a, b)
+
+# 3. Print the tuples separated by a space
+# The * operator "unpacks" the iterator for the print function
+print(*result)
