@@ -1,0 +1,20 @@
+from itertools import combinations
+
+# 1. Read the inputs
+n = int(input())
+letters = input().split()
+k = int(input())
+
+# 2. Generate all possible combinations of indices (1-indexed based on problem description)
+# But we can just use the letters themselves
+combos = list(combinations(letters, k))
+
+# 3. Count how many combinations contain at least one 'a'
+favorable_outcomes = 0
+for c in combos:
+    if 'a' in c:
+        favorable_outcomes += 1
+
+# 4. Calculate and print the probability formatted to 3 decimal places
+probability = favorable_outcomes / len(combos)
+print(f"{probability:.3f}")
