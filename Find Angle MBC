@@ -1,0 +1,17 @@
+import math
+
+# 1. Read side lengths AB and BC
+ab = int(input())
+bc = int(input())
+
+# 2. Calculate the angle in radians using atan2
+# In triangle ABC, angle C = atan(AB/BC)
+# Since MBC is isosceles, Angle MBC = Angle C
+angle_rad = math.atan2(ab, bc)
+
+# 3. Convert radians to degrees
+angle_deg = math.degrees(angle_rad)
+
+# 4. Print with the degree symbol (chr(176))
+# round() is used to match the required integer output
+print(f"{round(angle_deg)}{chr(176)}")
