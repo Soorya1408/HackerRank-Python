@@ -1,0 +1,15 @@
+# 1. Read English subscribers
+n = int(input())
+english_set = set(map(int, input().split()))
+
+# 2. Read French subscribers
+m = int(input())
+french_set = set(map(int, input().split()))
+
+# 3. Find the symmetric difference
+# This includes (A-B) and (B-A)
+# Use .symmetric_difference() or the ^ operator
+result_set = english_set ^ french_set
+
+# 4. Print the total count
+print(len(result_set))
