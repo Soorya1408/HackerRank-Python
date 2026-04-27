@@ -1,0 +1,13 @@
+import cmath
+
+# 1. Read the input string and convert it to a complex number
+z = complex(input())
+
+# 2. Get r (the absolute value or magnitude)
+# 3. Get phi (the phase or argument)
+r = abs(z)
+phi = cmath.phase(z)
+
+# 4. Print results
+print(r)
+print(phi)
